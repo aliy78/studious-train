@@ -1,1 +1,16 @@
-print("Привет мир! Это Мост Благовестия!")
+def show_gospel(language="ru"):
+    gospel = {
+                "ru": "Ибо так возлюбил Бог мир...",
+                        "en": "For God so loved the world...",
+                                "es": "Porque de tal manera amó Dios al mundo...",
+                                        "fr": "Car Dieu a tant aimé le monde...",
+                                                "de": "Denn also hat Gott die Welt geliebt...",
+    }
+        print("Мост Благовестия 🌍")
+            print("Язык:", language.upper())
+                print("Текст:", gospel.get(language, gospel["ru"]))
+
+                # ⬇️ Вот вызов функции — НАРУЖИ
+                show_gospel("en")
+                
+    }
