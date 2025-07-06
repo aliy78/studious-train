@@ -1,0 +1,12 @@
+from fastapi import APIRouter
+
+router = APIRouter()
+
+@router.get("/")
+async def read_root():
+    return {"message": "Привет мир от FastAPI!"}
+
+    @router.get("/gospel")
+    async def get_gospel_message():
+        return {"text": "Ибо так возлюбил Бог мир, что отдал Сына Своего Единородного, дабы всякий верующий в Него, не погиб, но имел жизнь вечную."}
+        

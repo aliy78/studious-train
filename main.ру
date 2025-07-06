@@ -1,16 +1,7 @@
-def show_gospel(language="ru"):
-    gospel = {
-                "ru": "Ибо так возлюбил Бог мир...",
-                        "en": "For God so loved the world...",
-                                "es": "Porque de tal manera amó Dios al mundo...",
-                                        "fr": "Car Dieu a tant aimé le monde...",
-                                                "de": "Denn also hat Gott die Welt geliebt...",
-    }
-        print("Мост Благовестия 🌍")
-            print("Язык:", language.upper())
-                print("Текст:", gospel.get(language, gospel["ru"]))
+from fastapi import FastAPI
+from api.verse import router  # Импортируем маршрутизатор
 
-                # ⬇️ Вот вызов функции — НАРУЖИ
-                show_gospel("en")
-                
-    }
+app = FastAPI(title="Gospel_app ✝️")
+
+app.include_router(router)
+
