@@ -1,7 +1,0 @@
-from fastapi import FastAPI
-from api.verse import router  # Импортируем маршрутизатор
-
-app = FastAPI(title="Gospel_app ✝️")
-
-app.include_router(router)
-

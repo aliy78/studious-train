@@ -2,12 +2,19 @@
         "version": "0.2.0",
           "configurations": [
               {
-                    "name": "Python: Запуск текущего файла",
+                    "name": "FastAPI",
                           "type": "python",
                                 "request": "launch",
-                                      "program": "${file}",
-                                            "console": "integratedTerminal"
-                                                }
-                                                  ]
-                                                  }
-}
+                                      "module": "uvicorn",
+                                            "args": [
+                                                    "main:app",
+                                                            "--reload"
+                                                                  ]
+                                                                      }
+                                                                        ]
+                                                                        }cd ~/workspaces/studious-train
+                                                                        from fastapi import FastAPI
+                                                                        from api.verse import router
+
+                                                                        app = FastAPI()
+                                                                        app.include_router(router)
