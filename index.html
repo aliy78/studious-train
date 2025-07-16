@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Стих дня</title>
+</head>
+<body>
+  <h1>Добро пожаловать!</h1>
+  <p id="verse">Загрузка стиха...</p>
+
+  <script>
+    fetch('verse.txt')
+      .then(response => response.text())
+      .then(text => {
+        document.getElementById("verse").textContent = text;
+      })
+      .catch(error => {
+        document.getElementById("verse").textContent = "Ошибка загрузки.";
+        console.error("Ошибка:", error);
+      });
+  </script>
+</body>
+</html>
